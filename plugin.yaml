@@ -1,0 +1,8 @@
+name: durable_execution
+title: Durable Execution
+description: "Opt-in journaled execution, recovery review, transactional chat plans, and shared PostgreSQL workers. No framework files are changed."
+version: 0.1.0
+settings_sections:
+  - agent
+per_project_config: false
+per_agent_config: false

@@ -1,0 +1,5 @@
+backend: local
+retention_runs: 100
+retention_days: 30
+interactive_shells: true
+ssh_known_hosts: ""

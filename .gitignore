@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+config.json
+state/
+.toggle-1
+*.sqlite3*
+.env*

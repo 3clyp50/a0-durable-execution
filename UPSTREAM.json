@@ -1,0 +1,1065 @@
+{
+  "upstream": {
+    "repository": "https://github.com/agent0ai/agent-zero",
+    "pull_request": 1968,
+    "base": "505c0b4dc632ee9d83b5e06dc6be57edb238193d",
+    "head": "b77c1ae3f6284b80ffe3054e5c0ad3c514dc3e1e"
+  },
+  "modules": {
+    "agent.py": {
+      "path": "overrides/agent.py",
+      "accepted_sources": [
+        "d145d888753697a6f1bb7f48280c5bf8faf2d5141987206977f4a00548347b26"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "AgentContext",
+          "methods": [
+            "kill_process",
+            "reset",
+            "communicate"
+          ],
+          "attributes": [],
+          "native_methods": [
+            "kill_process",
+            "reset",
+            "communicate"
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "Agent",
+          "methods": [
+            "monologue",
+            "_call_model_with_stream",
+            "call_chat_model_turn",
+            "handle_intervention",
+            "wait_if_paused",
+            "_execute_tool_request",
+            "_log_response_builtin_items",
+            "_handle_responses_mcp_approval_request",
+            "process_tools"
+          ],
+          "attributes": [],
+          "native_methods": [
+            "monologue",
+            "call_chat_model_turn",
+            "handle_intervention",
+            "process_tools"
+          ]
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "api/api_reset_chat.py": {
+      "path": "overrides/api/api_reset_chat.py",
+      "accepted_sources": [
+        "b809960e66f1f55bbf2f960f3014f0edead24d58e473666daf2b04843ec5e6ee"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "ApiResetChat",
+          "methods": [
+            "process"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "api/api_terminate_chat.py": {
+      "path": "overrides/api/api_terminate_chat.py",
+      "accepted_sources": [
+        "4ae50364ceb2f6198ca1ba70feb6231e6de3ed0ef9764493fbe127307ef843a0"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "ApiTerminateChat",
+          "methods": [
+            "process"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "api/chat_remove.py": {
+      "path": "overrides/api/chat_remove.py",
+      "accepted_sources": [
+        "aa98059d98ed36f32f9bfbc4715b7676d4721fd7111f6e5cbcf20cc002531ce8"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "RemoveChat",
+          "methods": [
+            "process"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "api/chat_reset.py": {
+      "path": "overrides/api/chat_reset.py",
+      "accepted_sources": [
+        "3302825dccb8800142f6918f49c79c1d8e7e7bbeba30afa4ee97a169bedccf29"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Reset",
+          "methods": [
+            "process"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "api/message.py": {
+      "path": "overrides/api/message.py",
+      "accepted_sources": [
+        "51aef4ec175b81f7bce3e4504fe4b2717f2beafce98003a24a54de7a30625223"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Message",
+          "methods": [
+            "communicate"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "api/pause.py": {
+      "path": "overrides/api/pause.py",
+      "accepted_sources": [
+        "74a3f55902dff77039a80ad753398634f24dee73de83190ce7ed90911315defe"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Pause",
+          "methods": [
+            "process"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "extensions/python/message_loop_end/_10_organize_history.py": {
+      "path": "overrides/extensions/python/message_loop_end/_10_organize_history.py",
+      "accepted_sources": [
+        "70998648652bb1192f47f3bc4a4907a1b7860045bf6f76dbf075841cea0394bb"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "OrganizeHistory",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "extensions/python/message_loop_prompts_before/_90_organize_history_wait.py": {
+      "path": "overrides/extensions/python/message_loop_prompts_before/_90_organize_history_wait.py",
+      "accepted_sources": [
+        "11ccd593776872e26c8501414b3847ec7f26c90661d81f827ad6258a708b1da4"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "OrganizeHistoryWait",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "helpers/api.py": {
+      "path": "overrides/helpers/api.py",
+      "accepted_sources": [
+        "f88f0dae9b2c4405f56893bfad9efe2c6965717d6f4ce3755ffb0e6318542b52"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "ApiHandler",
+          "methods": [
+            "handle_request",
+            "use_context"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/defer.py": {
+      "path": "overrides/helpers/defer.py",
+      "accepted_sources": [
+        "04089d6059c6e9711eb4094775b3763f25830cc7c0394dec23b8d1b3db7dadd2"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "DeferredTask",
+          "methods": [
+            "result_async"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/job_loop.py": {
+      "path": "overrides/helpers/job_loop.py",
+      "accepted_sources": [
+        "aadfd3159bac11951e097b9bbf269228c5303a09cc83276934ab7d66e27d48ab"
+      ],
+      "operations": [
+        {
+          "kind": "definition",
+          "name": "scheduler_tick"
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/kvp.py": {
+      "path": "overrides/helpers/kvp.py",
+      "accepted_sources": [
+        "edf8e1a8e7529a03d56bb1edf4f338abf2cb7b53b8b196175a5fff98b376c010"
+      ],
+      "operations": [
+        {
+          "kind": "definition",
+          "name": "_ScopedStore"
+        },
+        {
+          "kind": "definition",
+          "name": "context_scope"
+        },
+        {
+          "kind": "definition",
+          "name": "_scoped"
+        },
+        {
+          "kind": "definition",
+          "name": "_scoped_find"
+        },
+        {
+          "kind": "definition",
+          "name": "_scoped_value"
+        },
+        {
+          "kind": "definition",
+          "name": "get_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "set_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "remove_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "find_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "get_persistent"
+        },
+        {
+          "kind": "definition",
+          "name": "set_persistent"
+        },
+        {
+          "kind": "definition",
+          "name": "remove_persistent"
+        },
+        {
+          "kind": "definition",
+          "name": "find_persistent"
+        }
+      ],
+      "globals": [
+        "_scope"
+      ],
+      "dynamic": false
+    },
+    "helpers/mcp_handler.py": {
+      "path": "overrides/helpers/mcp_handler.py",
+      "accepted_sources": [
+        "53820b398eb77ce0bdc32a2d19f68125f635db3f8c2d215d3b3effe5498db280"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "MCPTool",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "class",
+          "name": "MCPServerRemote",
+          "methods": [
+            "call_tool",
+            "validate_durable_session"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "class",
+          "name": "MCPServerLocal",
+          "methods": [
+            "call_tool",
+            "validate_durable_session"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "class",
+          "name": "MCPConfig",
+          "methods": [
+            "validate_durable_session",
+            "call_tool"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "definition",
+          "name": "_MCPRecoveryHold"
+        },
+        {
+          "kind": "class",
+          "name": "MCPClientBase",
+          "methods": [
+            "_run_isolated_operation",
+            "_execute_with_session",
+            "_durable_validator",
+            "validate_durable_session",
+            "call_tool"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "class",
+          "name": "MCPClientLocal",
+          "methods": [
+            "_create_stdio_transport"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/parallel_tools.py": {
+      "path": "overrides/helpers/parallel_tools.py",
+      "accepted_sources": [
+        "a28abcd6fec12faf4e6d237f785a779769aa8ff28fa0b6a5acfef24180a2dd03"
+      ],
+      "operations": [
+        {
+          "kind": "definition",
+          "name": "get_parallel_worker_job"
+        },
+        {
+          "kind": "definition",
+          "name": "queue_parallel_parent_history"
+        },
+        {
+          "kind": "definition",
+          "name": "build_parallel_jobs_extras"
+        },
+        {
+          "kind": "definition",
+          "name": "execute_tool_call"
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/persist_chat.py": {
+      "path": "overrides/helpers/persist_chat.py",
+      "accepted_sources": [
+        "46916bdb94c845a0b2939d11b36b671780d30c2237374f66ef56ca5252b8ca30"
+      ],
+      "operations": [
+        {
+          "kind": "definition",
+          "name": "save_tmp_chat"
+        },
+        {
+          "kind": "definition",
+          "name": "load_tmp_chats"
+        },
+        {
+          "kind": "definition",
+          "name": "chat_file_exists"
+        },
+        {
+          "kind": "definition",
+          "name": "saved_chat_ids"
+        },
+        {
+          "kind": "definition",
+          "name": "SharedDeletionHeld"
+        },
+        {
+          "kind": "definition",
+          "name": "ensure_removal_supported"
+        },
+        {
+          "kind": "definition",
+          "name": "remove_chat"
+        },
+        {
+          "kind": "definition",
+          "name": "_delete_provider_responses_for_chat"
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/projects.py": {
+      "path": "overrides/helpers/projects.py",
+      "accepted_sources": [
+        "3186e1ed046dce8f76a6ee3cfa27c17fbf4b50e34d92ff8afefb79e1851efb86"
+      ],
+      "operations": [
+        {
+          "kind": "definition",
+          "name": "get_project_folder"
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/state_snapshot.py": {
+      "path": "overrides/helpers/state_snapshot.py",
+      "accepted_sources": [
+        "e1f5a8014fe1d21870e0ddad534ebc55933d967493fc0b47f68f234f5c716e8e"
+      ],
+      "operations": [
+        {
+          "kind": "definition",
+          "name": "build_snapshot_from_request"
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/task_scheduler.py": {
+      "path": "overrides/helpers/task_scheduler.py",
+      "accepted_sources": [
+        "452f4d4e696e29644ff9121db5139c133712d22df298bb5fc2f246a28f677eaf"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "BaseTask",
+          "methods": [],
+          "attributes": [
+            "durable_occurrence_id",
+            "durable_run_id",
+            "durable_finished_occurrence_id",
+            "durable_status"
+          ]
+        },
+        {
+          "kind": "definition",
+          "name": "_write_task_projection"
+        },
+        {
+          "kind": "definition",
+          "name": "_shared_scheduler_owner"
+        },
+        {
+          "kind": "class",
+          "name": "SchedulerTaskList",
+          "methods": [
+            "get",
+            "__init__",
+            "_reload_shared",
+            "reload",
+            "save"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "class",
+          "name": "TaskScheduler",
+          "methods": [
+            "_unregister_running_task",
+            "cancel_running_task",
+            "cancel_tasks_by_context",
+            "tick",
+            "run_task_by_uuid",
+            "_run_task"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "helpers/tool.py": {
+      "path": "overrides/helpers/tool.py",
+      "accepted_sources": [
+        "4bffca977f5a418fbf0f78400d7b1b6dbd7208e7a0d8c9b5d302dfb72fd7a250"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Tool",
+          "methods": [
+            "documents"
+          ],
+          "attributes": [
+            "replay"
+          ]
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "plugins/_a0_connector/helpers/ws_runtime.py": {
+      "path": "overrides/plugins/_a0_connector/helpers/ws_runtime.py",
+      "accepted_sources": [
+        "66f1d667f2a98db28dde70056bf466428fd7358bbba2893683e5ed23d7293e59"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "ComputerUseMetadata",
+          "methods": [],
+          "attributes": [
+            "durable_instance_id"
+          ]
+        },
+        {
+          "kind": "class",
+          "name": "HostBrowserMetadata",
+          "methods": [],
+          "attributes": [
+            "durable_instance_id"
+          ]
+        },
+        {
+          "kind": "definition",
+          "name": "store_sid_computer_use_metadata"
+        },
+        {
+          "kind": "definition",
+          "name": "computer_use_metadata_for_sid"
+        },
+        {
+          "kind": "definition",
+          "name": "_durable_browser_instance"
+        },
+        {
+          "kind": "definition",
+          "name": "store_sid_host_browser_metadata"
+        },
+        {
+          "kind": "definition",
+          "name": "host_browser_metadata_for_sid"
+        },
+        {
+          "kind": "definition",
+          "name": "all_host_browser_metadata"
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "plugins/_a0_connector/tools/computer_use_remote.py": {
+      "path": "overrides/plugins/_a0_connector/tools/computer_use_remote.py",
+      "accepted_sources": [
+        "bdbe386456dcfe344823d6571c8d345e328964daed75808b7c787fef5e5cb926"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "ComputerUseRemote",
+          "methods": [
+            "execute",
+            "_dispatch_payload",
+            "_dispatch_payload_once",
+            "_resolve_capture_ref"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_browser/helpers/runtime.py": {
+      "path": "overrides/plugins/_browser/helpers/runtime.py",
+      "accepted_sources": [
+        "5e2dccbc11435a2f93fd339c14753fb48824bf72567647bb22c85b048bedc0e0"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "BrowserRuntime",
+          "methods": [
+            "__init__"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "class",
+          "name": "_BrowserRuntimeCore",
+          "methods": [
+            "__init__",
+            "last_interacted_browser_id",
+            "_load_restore_state",
+            "_tab_scope",
+            "_persist_browser_tabs",
+            "profile_dir",
+            "durable_root",
+            "downloads_dir",
+            "ensure_started",
+            "_start",
+            "_prepare_download_preferences",
+            "durable_health",
+            "durable_snapshot",
+            "durable_restore",
+            "durable_profile_checkpoint",
+            "durable_profile_resume",
+            "close",
+            "_on_context_closed",
+            "_register_page_locked",
+            "_on_new_page_sync"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "definition",
+          "name": "get_durable_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "discard_durable_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "_durable_custody_required"
+        },
+        {
+          "kind": "definition",
+          "name": "get_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "close_runtime"
+        },
+        {
+          "kind": "definition",
+          "name": "close_all_runtimes"
+        }
+      ],
+      "globals": [
+        "_durable_runtimes"
+      ],
+      "dynamic": false
+    },
+    "plugins/_browser/tools/browser.py": {
+      "path": "overrides/plugins/_browser/tools/browser.py",
+      "accepted_sources": [
+        "9e900f9353b55c20230bd83509dc345fd031b127773b3a563dacba683a888666"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Browser",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_code_execution/tools/code_execution_tool.py": {
+      "path": "overrides/plugins/_code_execution/tools/code_execution_tool.py",
+      "accepted_sources": [
+        "f8dd8ce1bb7915bbdf24467ac6a673b7cff62f9df83715f99a6b0ad16c470fff"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "CodeExecution",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "definition",
+          "name": "_get_config"
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_code_execution/tools/input.py": {
+      "path": "overrides/plugins/_code_execution/tools/input.py",
+      "accepted_sources": [
+        "9df378bf0ab4be63b9561310f7c3d12d39092a602ed069154a96a729fc5fe204"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Input",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_infection_check/helpers/checker.py": {
+      "path": "overrides/plugins/_infection_check/helpers/checker.py",
+      "accepted_sources": [
+        "905a51860e885e702f77db5f3206c29a390844cda88a293aa33e691e8c036ca7"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "InfectionChecker",
+          "methods": [
+            "start_analysis",
+            "gate",
+            "_gate_inner",
+            "_prepare_check_messages",
+            "_durable_analysis",
+            "_run_check",
+            "_clarify_loop"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "plugins/_memory/extensions/python/message_loop_prompts_after/_50_recall_memories.py": {
+      "path": "overrides/plugins/_memory/extensions/python/message_loop_prompts_after/_50_recall_memories.py",
+      "accepted_sources": [
+        "b0d3917699d78e248329cad9ebf9f3b1c7db5fed03305dfa7a77d96a88a34e2e"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "RecallMemories",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_memory/extensions/python/message_loop_prompts_after/_91_recall_wait.py": {
+      "path": "overrides/plugins/_memory/extensions/python/message_loop_prompts_after/_91_recall_wait.py",
+      "accepted_sources": [
+        "8c375c5e5d9acd146f74fe936c8582f8f82f3de69d4f5030a9a511cb793db987"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "RecallWait",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_memory/extensions/python/monologue_end/_50_memorize_fragments.py": {
+      "path": "overrides/plugins/_memory/extensions/python/monologue_end/_50_memorize_fragments.py",
+      "accepted_sources": [
+        "1c421de9e8daa629e4dc472c1879f307e79ce64068c89b3cb030078f71895350"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "MemorizeMemories",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_memory/extensions/python/monologue_end/_51_memorize_solutions.py": {
+      "path": "overrides/plugins/_memory/extensions/python/monologue_end/_51_memorize_solutions.py",
+      "accepted_sources": [
+        "44e52d4a4c8e5e13a1f37f46a8d652d634417b0727adfd59b3961c5893743726"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "MemorizeSolutions",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "plugins/_memory/helpers/memory.py": {
+      "path": "overrides/plugins/_memory/helpers/memory.py",
+      "accepted_sources": [
+        "25daaf04cd781629bf1acfb25c1936d5a40e6364731d6c77d3048d87d164a1a2"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Memory",
+          "methods": [
+            "get",
+            "get_by_subdir",
+            "reload",
+            "preload_knowledge",
+            "search_similarity_threshold",
+            "insert_documents",
+            "_save_db"
+          ],
+          "attributes": []
+        },
+        {
+          "kind": "definition",
+          "name": "get_existing_memory_subdirs"
+        }
+      ],
+      "globals": [],
+      "dynamic": false
+    },
+    "tools/call_subordinate.py": {
+      "path": "overrides/tools/call_subordinate.py",
+      "accepted_sources": [
+        "763fb78042155010a9d44e16da945f760df999345196255d31445ca65240d29d"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "Delegation",
+          "methods": [
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "tools/parallel.py": {
+      "path": "overrides/tools/parallel.py",
+      "accepted_sources": [
+        "90c2cadc6b0d14fa100abca27f1ebf022966c70960f4209c25afdb243e46b05b"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "ParallelTool",
+          "methods": [
+            "after_execution",
+            "execute"
+          ],
+          "attributes": []
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    },
+    "tools/response.py": {
+      "path": "overrides/tools/response.py",
+      "accepted_sources": [
+        "a9d21ac81051ab5f0dc53a43d4f83492762c034638565223d639e975ac79af8f",
+        "efe89da0bd630e5c98f8957cb46a3cd223bba76822fd6f587f4e68a06349d708"
+      ],
+      "operations": [
+        {
+          "kind": "class",
+          "name": "ResponseTool",
+          "methods": [],
+          "attributes": [
+            "replay"
+          ]
+        }
+      ],
+      "globals": [],
+      "dynamic": true
+    }
+  },
+  "sources": {
+    "api/durability.py": "api/durability.py",
+    "api/durability_resource.py": "api/durability_resource.py",
+    "helpers/durable/__init__.py": "helpers/durable/__init__.py",
+    "helpers/durable/adapters.py": "helpers/durable/adapters.py",
+    "helpers/durable/background.py": "helpers/durable/background.py",
+    "helpers/durable/cluster.py": "helpers/durable/cluster.py",
+    "helpers/durable/codec.py": "helpers/durable/codec.py",
+    "helpers/durable/computer.py": "helpers/durable/computer.py",
+    "helpers/durable/documents.py": "helpers/durable/documents.py",
+    "helpers/durable/execution.py": "helpers/durable/execution.py",
+    "helpers/durable/history.py": "helpers/durable/history.py",
+    "helpers/durable/hosted.py": "helpers/durable/hosted.py",
+    "helpers/durable/inputs.py": "helpers/durable/inputs.py",
+    "helpers/durable/interactive.py": "helpers/durable/interactive.py",
+    "helpers/durable/maintenance.py": "helpers/durable/maintenance.py",
+    "helpers/durable/mcp_broker.py": "helpers/durable/mcp_broker.py",
+    "helpers/durable/memorization.py": "helpers/durable/memorization.py",
+    "helpers/durable/memory.py": "helpers/durable/memory.py",
+    "helpers/durable/postgres.py": "helpers/durable/postgres.py",
+    "helpers/durable/projection.py": "helpers/durable/projection.py",
+    "helpers/durable/replay.py": "helpers/durable/replay.py",
+    "helpers/durable/resource_store.py": "helpers/durable/resource_store.py",
+    "helpers/durable/resources.py": "helpers/durable/resources.py",
+    "helpers/durable/retry.py": "helpers/durable/retry.py",
+    "helpers/durable/review.py": "helpers/durable/review.py",
+    "helpers/durable/runtime.py": "helpers/durable/runtime.py",
+    "helpers/durable/scheduler.py": "helpers/durable/scheduler.py",
+    "helpers/durable/sessions.py": "helpers/durable/sessions.py",
+    "helpers/durable/state_adapters.py": "helpers/durable/state_adapters.py",
+    "helpers/durable/store.py": "helpers/durable/store.py",
+    "helpers/durable/workflows.py": "helpers/durable/workflows.py",
+    "helpers/durable/workspaces.py": "helpers/durable/workspaces.py",
+    "helpers/tool_execution.py": "helpers/tool_execution.py",
+    "plugins/_browser/helpers/durable_connector.py": "adapters/browser/durable_connector.py",
+    "plugins/_browser/helpers/profile_checkpoint.py": "adapters/browser/profile_checkpoint.py",
+    "plugins/_browser/helpers/session_broker.py": "adapters/browser/session_broker.py",
+    "plugins/_code_execution/helpers/durable_pty.py": "adapters/code_execution/durable_pty.py",
+    "plugins/_memory/helpers/durable_memory.py": "adapters/memory/durable_memory.py",
+    "tools/durable_plan.py": "tools/durable_plan.py",
+    "agent.py": "overrides/agent.py",
+    "api/api_reset_chat.py": "overrides/api/api_reset_chat.py",
+    "api/api_terminate_chat.py": "overrides/api/api_terminate_chat.py",
+    "api/chat_remove.py": "overrides/api/chat_remove.py",
+    "api/chat_reset.py": "overrides/api/chat_reset.py",
+    "api/message.py": "overrides/api/message.py",
+    "api/pause.py": "overrides/api/pause.py",
+    "extensions/python/message_loop_end/_10_organize_history.py": "overrides/extensions/python/message_loop_end/_10_organize_history.py",
+    "extensions/python/message_loop_prompts_before/_90_organize_history_wait.py": "overrides/extensions/python/message_loop_prompts_before/_90_organize_history_wait.py",
+    "helpers/api.py": "overrides/helpers/api.py",
+    "helpers/defer.py": "overrides/helpers/defer.py",
+    "helpers/job_loop.py": "overrides/helpers/job_loop.py",
+    "helpers/kvp.py": "overrides/helpers/kvp.py",
+    "helpers/mcp_handler.py": "overrides/helpers/mcp_handler.py",
+    "helpers/parallel_tools.py": "overrides/helpers/parallel_tools.py",
+    "helpers/persist_chat.py": "overrides/helpers/persist_chat.py",
+    "helpers/projects.py": "overrides/helpers/projects.py",
+    "helpers/state_snapshot.py": "overrides/helpers/state_snapshot.py",
+    "helpers/task_scheduler.py": "overrides/helpers/task_scheduler.py",
+    "helpers/tool.py": "overrides/helpers/tool.py",
+    "plugins/_a0_connector/helpers/ws_runtime.py": "overrides/plugins/_a0_connector/helpers/ws_runtime.py",
+    "plugins/_a0_connector/tools/computer_use_remote.py": "overrides/plugins/_a0_connector/tools/computer_use_remote.py",
+    "plugins/_browser/helpers/runtime.py": "overrides/plugins/_browser/helpers/runtime.py",
+    "plugins/_browser/tools/browser.py": "overrides/plugins/_browser/tools/browser.py",
+    "plugins/_code_execution/tools/code_execution_tool.py": "overrides/plugins/_code_execution/tools/code_execution_tool.py",
+    "plugins/_code_execution/tools/input.py": "overrides/plugins/_code_execution/tools/input.py",
+    "plugins/_infection_check/helpers/checker.py": "overrides/plugins/_infection_check/helpers/checker.py",
+    "plugins/_memory/extensions/python/message_loop_prompts_after/_50_recall_memories.py": "overrides/plugins/_memory/extensions/python/message_loop_prompts_after/_50_recall_memories.py",
+    "plugins/_memory/extensions/python/message_loop_prompts_after/_91_recall_wait.py": "overrides/plugins/_memory/extensions/python/message_loop_prompts_after/_91_recall_wait.py",
+    "plugins/_memory/extensions/python/monologue_end/_50_memorize_fragments.py": "overrides/plugins/_memory/extensions/python/monologue_end/_50_memorize_fragments.py",
+    "plugins/_memory/extensions/python/monologue_end/_51_memorize_solutions.py": "overrides/plugins/_memory/extensions/python/monologue_end/_51_memorize_solutions.py",
+    "plugins/_memory/helpers/memory.py": "overrides/plugins/_memory/helpers/memory.py",
+    "tools/call_subordinate.py": "overrides/tools/call_subordinate.py",
+    "tools/parallel.py": "overrides/tools/parallel.py",
+    "tools/response.py": "overrides/tools/response.py"
+  },
+  "function_hooks": [
+    {
+      "class": "Durable_AgentContext_kill_process",
+      "source": "3190a34cc02657dab5cef7965d0d1013721fe35e84e7a56e11fac79e08463434"
+    },
+    {
+      "class": "Durable_AgentContext_reset",
+      "source": "dc448d91288544aabd4fbc96d647d685a1563e75d6b7950832e83bb0df6d6bda"
+    },
+    {
+      "class": "Durable_AgentContext_communicate",
+      "source": "4421ba4e0ebbbdf8bb8bbcc630e971188144dfc1d75eee87634dcacad322bf8b"
+    },
+    {
+      "class": "Durable_Agent_monologue",
+      "source": "69f11ba179bbebc2a5ec091b28a468b0f47f09f9202217d139cb401ea282f27b"
+    },
+    {
+      "class": "Durable_Agent_call_chat_model_turn",
+      "source": "521520266685a101e8f312a69b2bbb456f79ea715054d028acd112d83bf64f4e"
+    },
+    {
+      "class": "Durable_Agent_handle_intervention",
+      "source": "f30efcc71a9dffc8038eec8a58d4c50a1fca6f6199e67d53700474395e36e467"
+    },
+    {
+      "class": "Durable_Agent_process_tools",
+      "source": "1ba1a833c5412f120d98cce9ccb11e17adcc3c1ab6d15da7904e0d985878cc3c"
+    },
+    {
+      "class": "DurableStartup",
+      "source": "026bc533780de3ca5d8185e9eb857e44533b7bdc61140eba9f34575af9ca02b3"
+    },
+    {
+      "class": "DurableRecovery",
+      "source": "fa94f6797618b7926f6057ada6e02fc044d43922a2bbe903712fe4cf202724c4"
+    },
+    {
+      "class": "DurableDisable",
+      "source": "77141d32d780db14009d4ebe34182c5bdc38b0937115672d901ed1b6fed867b5"
+    },
+    {
+      "class": "DurableEnable",
+      "source": "32a9466d3d16216e42bf7ab9fd758023b11bfa4d8debb32b208536d66e570777"
+    },
+    {
+      "class": "DurablePreserveImports",
+      "source": "b595348ea2fdd90468c3d13386a44a9602209a0f4ec3600c1f9263ad692b0627"
+    },
+    {
+      "class": "DurableRestoreImports",
+      "source": "4a4e53f790ae139d3abeb04e1928f72e4cfa3d8c7733d93a6cc5452a2c987f40"
+    }
+  ]
+}

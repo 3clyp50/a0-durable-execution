@@ -1,0 +1,11 @@
+<html><head><title>Durable Execution</title></head><body><div x-data>
+<p>Enable this plugin to journal new work. Disable it to restore the framework's ordinary execution path. Stop active runs before changing backend or disabling.</p>
+<label>Storage <select x-model="config.backend"><option value="local">Local SQLite</option><option value="postgres">Shared PostgreSQL</option></select></label>
+<label>Completed runs to retain <input type="number" min="0" max="10000" x-model.number="config.retention_runs"></label>
+<label>Retention days <input type="number" min="0" max="3650" x-model.number="config.retention_days"></label>
+<label><input type="checkbox" x-model="config.interactive_shells">Interactive durable shells (PostgreSQL)</label>
+<label>Verified SSH known_hosts file <input type="text" maxlength="4096" x-model="config.ssh_known_hosts" placeholder="/path/to/verified/known_hosts"></label>
+<p>SSH connection settings stay in Code Execution. Shared SSH recovery requires an existing, verified known_hosts file on this worker.</p>
+<p>Backend changes take effect after restart. PostgreSQL uses A0_DURABILITY_POSTGRES_DSN and A0_DURABILITY_RESOURCE_KEY from the server environment. It requires the optional psycopg binary driver.</p>
+<button type="button" class="button" @click="openModal('/plugins/durable_execution/webui/main.html')"><x-icon name="restore"></x-icon>Recovery and documents</button>
+</div></body></html>
