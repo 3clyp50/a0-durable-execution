@@ -138,6 +138,30 @@ def test_sqlite_install_does_not_install_packages(monkeypatch):
     hooks.prepare_backend()
 
 
+@pytest.mark.parametrize("enabled", [False, True])
+def test_install_resumes_only_a_previously_enabled_plugin(monkeypatch, enabled):
+    from helpers import plugins
+    from usr.plugins.durable_execution import hooks
+    calls = []
+    for name in ("preflight", "start", "recover"):
+        monkeypatch.setattr(hooks.bridge, name, lambda name=name: calls.append(name))
+    monkeypatch.setattr(hooks, "prepare_backend", lambda: calls.append("backend"))
+    monkeypatch.setattr(plugins, "get_enabled_plugins", lambda agent: ["durable_execution"] if enabled else [])
+    hooks.install()
+    assert calls == ["preflight", "backend"] + (["start", "recover"] if enabled else [])
+
+
+def test_update_releases_cached_plugin_code_after_cleanup(monkeypatch):
+    from helpers import cache, plugins
+    from usr.plugins.durable_execution import hooks
+    calls = []
+    monkeypatch.setattr(hooks.bridge, "deactivate", lambda: calls.append("stop"))
+    monkeypatch.setattr(modules, "purge_namespace", lambda name: calls.append(name))
+    monkeypatch.setattr(cache, "remove", lambda area, key: calls.append((area, key)))
+    hooks.pre_update()
+    assert calls == ["stop", "usr.plugins.durable_execution", (plugins.HOOKS_CACHE_AREA, "durable_execution")]
+
+
 def test_postgres_installs_missing_driver_only(monkeypatch):
     from usr.plugins.durable_execution import hooks
     from usr.plugins.durable_execution.helpers import config

@@ -106,6 +106,8 @@ stopped, including their child processes; an unacknowledged effect remains unkno
 in the journal. Remote SSH commands and companion services retain their own
 lifecycle: review/cancel them before disabling, and use their host controls if
 cleanup cannot be acknowledged. Disabling does not declare an external action undone.
+Successful updates reload the plugin and restore its enabled state. If an update
+fails, disable it until the error is resolved.
 
 Recovery data is preserved under `usr/plugin_data/durable_execution/` outside the
 install checkout. Uninstall does not delete it or shared packages. Independent

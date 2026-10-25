@@ -6,7 +6,7 @@ The live target was the Dockerized Agent Zero at `localhost:32081`.
 
 | Check | Result |
 | --- | --- |
-| Native plugin boundaries | 19 passed |
+| Native plugin boundaries | 22 passed |
 | Retained upstream engine suite | 332 passed, 34 subtests passed; no skips |
 | Browser UI state and retry identities | 30 passed |
 | Undefined Python names (`ruff check --select F821`) | Passed |
